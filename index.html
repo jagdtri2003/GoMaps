@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoMaps</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css"
+    />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+
+    <style>
+      /* Set the height of the map to fill the screen */
+      #map {
+        height: 89vh;
+        width: 100%;
+      }
+        /* Style for the dropdown container */
+        .dropdown-container {
+            position: absolute;
+            bottom: 20px; /* Adjust as needed */
+            left: 20px; /* Adjust as needed */
+            background-color: white; /* Background color for visibility */
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+        }
+
+        /* Style for the select element */
+        select {
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        .car {
+            transform: rotate(100deg); /* Adjust the angle as needed */
+            transform-origin: center; /* Ensure the rotation happens around the center */
+        }
+    </style>
+  </head>
+  <body>
+    <h2 id="mainTitle">GoMap : Live Tracking</h2>
+
+    <!-- Map container -->
+    <div id="map"></div>
+
+    <!-- Dropdown for Today and Yesterday -->
+    <div class="dropdown-container">
+        <label for="date-selector">Select Date:</label>
+        <select id="date-selector">
+            <option value="today">Today</option>
+            <option value="yesterday">Yesterday</option>
+        </select>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
